@@ -4,7 +4,6 @@ class Quadratic{
 	private double b;
 	private double c;
 	private double [] zeros = new double[2];
-	private boolean isReal = true;
 	private double AOS;
 	private Point vertex;
 	public Quadratic(){
@@ -43,7 +42,6 @@ class Quadratic{
 		else if (d < 0){
 			points[0] = Double.NaN;
 			points[1] = Double.NaN;
-			isReal = false;
 		}
 		return points;
 	}
