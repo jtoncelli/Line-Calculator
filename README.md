@@ -1,6 +1,20 @@
 # Line-Calculator
 A calculator that can analyze linear, quadratic, and cubic equations. 
 
+## User Interface
+
+I spent a lot of time trying to make the driver code simple and friendly to use. All of the driver code is in the Main class.
+
+Here is a brief summary of the user experience:
+
+- Pick what kind of equation (linear, quadratic, or cubic)
+  - Enter whatever information they have about the equation
+  - If enough information is provided, then printInfo() runs
+  - The user is shown all the information about the equation and has an oppurtunity to enter an x or y value
+
+For more specific information on how it works, what is displayed, or what calculations are made, read further below:
+
+
 ## Creating Points
 
 I first made a **Point** class, which has the attributes x and y. I also added a few methods to make future calculations easier shown below:
@@ -87,3 +101,13 @@ Finally, the **Cubic** class represents a third degree equation.
 It has 5 attributes: a, b, c, d, and an array for the zeros. The first 4 align with the ax<sup>3</sup> + bx<sup>2</sup> + cx + d = 0. 
 
 This class also only has two constructors, just like the Quadratic class. It either defaults to y = x<sup>3</sup> or accepts a, b, c, and d as inputs. 
+
+Below are descriptions of all class methods except getters and setters:
+
+```java
+  public String getEquation(){ //returns a string representation of the equation in ax^3 + bx^2 + cx + d = 0 format }
+  public double[] findX(double y){ //returns up to three solutions, if any, of the cubic equation at the provided y-value }
+  public double findY(double x){ //returns the y-value associated with the provided x-value }
+  public void printInfo(){ //displays all of the information associated wit the equation }
+  public double[] solveCubic(double a, double b, double c, double d){ //returns up to three solutions of the equation ax^3 + bx^2 + cx + d = 0 }
+```
